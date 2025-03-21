@@ -1,0 +1,94 @@
+body{
+  background-color: rgb(27, 24, 24);
+  color: antiquewhite;
+  position: relative;
+}
+.form{
+  width:max-content ;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.cross{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-100%,0);
+  padding: 5px;
+}
+.heading{
+  text-align: center;
+  width: 80%;
+   height: 50px; 
+  background-color: orange;
+  justify-content: center;
+  font-size: 32px;
+  margin: auto;
+}
+.expenceTable{
+  border: 2px solid orange;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+
+}
+.expenceTable tbody{
+  border: 1px solid orange;
+  background-color: rgb(184, 6, 36);
+  /* margin: 20px; */
+}
+.expenceTable button{
+  background-color: orangered;
+  color: black;
+  padding: 10px;
+  border-radius: 30%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.formPage{
+  width: max-content;
+  margin:20px auto;
+  border: 2px solid orange;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+}
+.formPage input{
+  color: rgb(10, 10, 10);
+  padding: 10px 10px;
+  border: inherit;
+  border-radius: 10px;
+}
+.formPage button{
+  background-color: rgb(187, 11, 70);
+  border: inherit;
+  border-radius: 10px;
+
+}
+.formPage button:hover{
+  background-color: rgb(92, 30, 40);
+  color: white;
+}
+.border{
+  width: 100vw;
+  height: 100vh;
+  border: 10px solid red;
+}
+.background{
+  background-color: yellow;
+  width: 100vw;
+  height: 100vh;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

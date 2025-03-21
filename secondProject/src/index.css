@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(17, 15, 15);
+    color: white;
+}
+
+.one:hover{
+    color: green;
+    background-color: yellow;
+    
+}
