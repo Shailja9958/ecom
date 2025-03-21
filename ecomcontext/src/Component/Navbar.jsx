@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <ul>
-        <li>
-          <Link to={'/'}>Home</Link>
+      <ul className="flex content-center justify-center gap-3 mt-3">
+        <li className="h-[30px] w-[60px] bg-amber-300 rounded-l ">
+          <Link to={"/"}>Home</Link>
         </li>
-        <li>
-          <Link to={'/Cart'}>Cart</Link>
+        <li className="h-[30px] w-[60px] bg-amber-300 rounded-l ">
+          <Link to={"/Cart"}>Cart</Link>
         </li>
-        <li>
-          <Link>Login</Link>
+        <li className="h-[30px] w-[60px] bg-amber-300 rounded-l ">
+          <Link to={"/Login"}>Login</Link>
         </li>
-        <li>
-          <Link>SignUp</Link>
+        <li className="h-[30px] w-[60px] bg-amber-300 rounded-l ">
+          <Link to={"/SignUp"}>SignUp</Link>
         </li>
-        <li>
-          <Link>View</Link>
+        <li className="h-[30px] w-[60px] bg-amber-300 rounded-l ">
+          <Link to={"/View"}>View</Link>
         </li>
       </ul>
     </div>
