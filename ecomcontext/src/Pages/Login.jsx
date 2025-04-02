@@ -34,7 +34,11 @@ console.log(obj)
 
   if (find){
     if(find.password==obj.password){
-      return(navigate('/'))
+      // return(navigate('/'))
+      localStorage.setItem(
+        "Login",
+        JSON.stringify({ email: obj.email, login: true }));
+      userStore.setuser({ email: obj.email, login: true });
     }
     else{
       alert('wrong password')
