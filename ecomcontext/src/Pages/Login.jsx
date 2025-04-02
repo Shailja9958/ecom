@@ -6,6 +6,10 @@ import Typed from "typed.js";
 
 
 const Login = () => {
+
+  let userStore = useContext(UserContext);
+  console.log(userStore);
+
   let x=useContext(CartContext)
   console.log(x)
 

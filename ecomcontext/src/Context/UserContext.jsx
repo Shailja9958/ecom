@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
 
-let UserState=createContext();
+let UserContext=createContext();
 
-export default UserState
+export default UserContext

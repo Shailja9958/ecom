@@ -1,6 +1,6 @@
 
 import './App.css'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from './Pages/Home';
 import Cart from './Pages/Cart';
 import View from './Pages/View';
@@ -12,18 +12,35 @@ import Navbar from './Component/Navbar';
 
 function App() {
   
+let login=true;
+
   return (
     <>
       <BrowserRouter>
-      {/* <Navbar></Navbar> */}
-      <Navbar/>
+        {/* <Navbar></Navbar> */}
+        <Navbar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Cart" element={<Cart />} />
-          <Route path="/View" element={<View />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/SignUp" element={<SignUp />} />
+          <Route
+            path="/"
+            element={login === true ? <Home /> : <Navigate to="/Login" />}
+          />
+          <Route
+            path="/Cart"
+            element={login === true ? <Cart /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/View"
+            element={login === true ? <View /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/Login"
+            element={login === false ? <Login /> : <Navigate to="/" />}
+          />
+          <Route
+            path="/SignUp"
+            element={login === false ? <Signup /> : <Navigate to="/" />}
+          />
         </Routes>
       </BrowserRouter>
     </>
