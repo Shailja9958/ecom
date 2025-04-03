@@ -12,7 +12,9 @@ import Navbar from './Component/Navbar';
 
 function App() {
   
-let login=true;
+let userStore = useContext(UserContext);
+      console.log(userStore)
+  let Login = userStore.user.Login 
 
   return (
     <>
@@ -27,11 +29,11 @@ let login=true;
           />
           <Route
             path="/Cart"
-            element={login === true ? <Cart /> : <Navigate to="/login" />}
+            element={login === true ? <Cart /> : <Navigate to="/Login" />}
           />
           <Route
             path="/View"
-            element={login === true ? <View /> : <Navigate to="/login" />}
+            element={login === true ? <View /> : <Navigate to="/Login" />}
           />
           <Route
             path="/Login"
@@ -39,7 +41,7 @@ let login=true;
           />
           <Route
             path="/SignUp"
-            element={login === false ? <Signup /> : <Navigate to="/" />}
+            element={login === false ? <SignUp /> : <Navigate to="/" />}
           />
         </Routes>
       </BrowserRouter>
